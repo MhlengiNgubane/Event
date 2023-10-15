@@ -40,7 +40,6 @@ func ExtractConfiguration(filename string) (ServiceConfig, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		fmt.Println("Configuration file not found. Continuing with default values.")
-		// return conf, err
 	}
 
 	json.NewDecoder(file).Decode(&conf)
